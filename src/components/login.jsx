@@ -12,8 +12,8 @@ const Login = () => {
     const responseGoogle=(response)=>{
         // console.log(response);    
         // console.log(jwt_decode(response.credential));
-        localStorage.setItem("user",JSON.stringify(jwt_decode(response.credential)))
-        const { aud,name,picture }=jwt_decode(response.credential)
+        localStorage.setItem("user",JSON.stringify(jwt_decode(response?.credential)))
+        const { aud,name,picture }=jwt_decode(response?.credential)
 
         const doc={
             _id:aud,

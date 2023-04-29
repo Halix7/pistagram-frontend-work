@@ -20,7 +20,7 @@ const Home = () => {
   const userInfo = FetchUser();
   useEffect(() => {
     // getting the query from utils and aud is googleId
-    const query = UserQuery(userInfo.aud);
+    const query = UserQuery(userInfo?.aud);
     client.fetch(query).then((data)=>{
       setUser(data[0])
     })
